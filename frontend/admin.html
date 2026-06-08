@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>The Howard's Council – IELTS & Spoken English Coaching</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+/* ─── RESET & VARIABLES ─────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --white: #ffffff;
+  --bg: #f8f7f3;
+  --dark: #1a1a2e;
+  --dark2: #16213e;
+  --accent-yellow: #FFD43B;
+  --accent-green: #69DB7C;
+  --accent-blue: #74C0FC;
+  --accent-pink: #F783AC;
+  --accent-orange: #FFA94D;
+  --text: #1a1a2e;
+  --text-muted: #6b7280;
+  --radius: 18px;
+  --radius-lg: 28px;
+  --shadow: 0 4px 24px rgba(26,26,46,.08);
+  --shadow-md: 0 8px 40px rgba(26,26,46,.13);
+}
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ─── SCROLLBAR ─────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent-yellow); border-radius: 3px; }
+
+/* ─── HIGHLIGHT TEXT EFFECTS ────────────────────────── */
+.hl-yellow { position: relative; display: inline; z-index: 1; }
+.hl-yellow::before {
+  content: '';
+  position: absolute;
+  left: -4px; right: -4px;
+  bottom: 0; top: 10%;
+  background: var(--accent-yellow);
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(-0.8deg);
+}
+.hl-green { position: relative; display: inline; z-index: 1; }
+.hl-green::before {
+  content: '';
+  position: absolute;
+  left: -4px; right: -4px;
+  bottom: 0; top: 15%;
+  background: var(--accent-green);
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(0.5deg);
+  opacity: .85;
+}
+.hl-blue { position: relative; display: inline; z-index: 1; }
+.hl-blue::before {
+  content: '';
+  position: absolute;
+  left: -4px; right: -4px;
+  bottom: -2px; top: 12%;
+  background: var(--accent-blue);
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(-0.4deg);
+  opacity: .8;
+}
+.hl-pink { position: relative; display: inline; z-index: 1; }
+.hl-pink::before {
+  content: '';
+  position: absolute;
+  left: -4px; right: -4px;
+  bottom: -2px; top: 12%;
+  background: var(--accent-pink);
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(0.7deg);
+  opacity: .75;
+}
+.hl-orange { position: relative; display: inline; z-index: 1; }
+.hl-orange::before {
+  content: '';
+  position: absolute;
+  left: -4px; right: -4px;
+  bottom: -2px; top: 12%;
+  background: var(--accent-orange);
+  z-index: -1;
+  border-radius: 4px;
+  transform: rotate(-0.6deg);
+  opacity: .82;
+}
+.brush-stroke { position: relative; display: inline-block; }
+.brush-stroke::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -6px;
+  height: 10px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 9 C30 5, 60 11, 100 8 C140 5, 170 10, 198 7' stroke='%23FFD43B' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/100% 100%;
+}
+
+/* ─── NAV ────────────────────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 999;
+  background: rgba(248,247,243,.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  padding: 0 5%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.nav-logo {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--dark);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 10px;
+}
+.logo-badge {
+  background: var(--dark);
+  color: var(--accent-yellow);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  white-space: nowrap;
+}
+.nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+.nav-links a {
+  font-size: .88rem; font-weight: 600;
+  color: var(--text-muted); text-decoration: none;
+  transition: color .2s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--dark); }
+.nav-cta {
+  background: var(--dark);
+  color: var(--accent-yellow) !important;
+  padding: 9px 20px;
+  border-radius: 12px;
+  font-weight: 700 !important;
+  transition: transform .2s, box-shadow .2s !important;
+}
+.nav-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(26,26,46,.2) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+.hamburger span { width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: .3s; display: block; }
+
+/* ─── HERO ───────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  padding: 84px 5% 60px;
+  display: flex; align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.hero-bg-shape.s1 {
+  width: 600px; height: 600px;
+  background: rgba(255,212,59,.18);
+  top: -100px; right: -100px;
+}
+.hero-bg-shape.s2 {
+  width: 400px; height: 400px;
+  background: rgba(105,219,124,.15);
+  bottom: -80px; left: -80px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px; align-items: center;
+  max-width: 1200px; margin: 0 auto; width: 100%;
+  position: relative; z-index: 1;
+}
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white;
+  border: 1.5px solid rgba(0,0,0,.08);
+  border-radius: 100px;
+  padding: 6px 16px;
+  font-size: .78rem; font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+}
+.hero-tag .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-green); flex-shrink: 0; }
+.hero-h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--dark);
+  margin-bottom: 18px;
+}
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  max-width: 480px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.btn-primary {
+  background: var(--dark);
+  color: var(--accent-yellow);
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: .92rem;
+  text-decoration: none;
+  border: none; cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  white-space: nowrap;
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(26,26,46,.25); }
+.btn-secondary {
+  background: white;
+  color: var(--dark);
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: .92rem;
+  text-decoration: none;
+  border: 2px solid rgba(0,0,0,.1);
+  cursor: pointer;
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  white-space: nowrap;
+}
+.btn-secondary:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--dark); }
+.btn-wa {
+  background: #25D366;
+  color: white;
+  padding: 13px 26px;
+  border-radius: 14px;
+  font-weight: 700;
+  font-size: .92rem;
+  text-decoration: none;
+  border: none; cursor: pointer;
+  transition: transform .2s, box-shadow .2s;
+  display: inline-flex; align-items: center; gap: 8px;
+  white-space: nowrap;
+}
+.btn-wa:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(37,211,102,.4); }
+
+.hero-stats { display: flex; gap: 28px; flex-wrap: wrap; }
+.stat-item { display: flex; flex-direction: column; }
+.stat-num {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.8rem; font-weight: 800;
+  color: var(--dark);
+  line-height: 1;
+}
+.stat-num span { color: var(--accent-yellow); }
+.stat-label { font-size: .78rem; font-weight: 600; color: var(--text-muted); margin-top: 4px; }
+
+/* Hero visual */
+.hero-visual {
+  position: relative;
+  height: 480px;
+}
+.hero-image-card {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(26,26,46,0.22);
+}
+.hero-image-card img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(26,26,46,0.75) 80%, rgba(26,26,46,0.92) 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 28px;
+}
+.hero-image-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.hc-tag {
+  background: rgba(255,255,255,.12);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: .75rem; font-weight: 600; color: white;
+}
+.hc-tag.yellow { background: var(--accent-yellow); color: var(--dark); border-color: transparent; }
+.hero-image-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.15rem; font-weight: 800;
+  color: white; margin-bottom: 6px; line-height: 1.3;
+}
+.hero-image-loc { font-size: .8rem; color: rgba(255,255,255,.65); }
+
+/* Floating badges */
+.float-badge {
+  position: absolute;
+  background: white;
+  border-radius: 14px;
+  padding: 10px 16px;
+  box-shadow: var(--shadow-md);
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 700; font-size: .8rem;
+  color: var(--dark);
+  z-index: 10;
+}
+.float-badge.f1 {
+  top: -16px; right: -16px;
+  animation: float 3s ease-in-out infinite;
+}
+.float-badge.f3 {
+  top: 50%; right: -36px;
+  transform: translateY(-50%);
+  animation: float3 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes float3 {
+  0%,100% { transform: translateY(-50%); }
+  50% { transform: translateY(calc(-50% - 10px)); }
+}
+.badge-icon { font-size: 1.2rem; }
+
+/* ─── SECTION COMMONS ────────────────────────────────── */
+section { padding: 80px 5%; }
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: white;
+  border: 1.5px solid rgba(0,0,0,.07);
+  border-radius: 100px;
+  padding: 5px 16px;
+  font-size: .75rem; font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow);
+}
+.section-h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(1.7rem, 3vw, 2.6rem);
+  font-weight: 800;
+  color: var(--dark);
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.section-sub {
+  font-size: .97rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+.container { max-width: 1200px; margin: 0 auto; }
+
+/* ─── ABOUT ──────────────────────────────────────────── */
+#about { background: white; }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: center;
+}
+.about-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.about-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  border: 1px solid rgba(0,0,0,.05);
+  transition: transform .3s, box-shadow .3s;
+}
+.about-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.about-card.featured {
+  background: var(--dark);
+  grid-column: span 2;
+  display: flex; align-items: center; gap: 18px;
+}
+.about-card.featured .ac-icon { font-size: 2.2rem; flex-shrink: 0; }
+.about-card.featured h3, .about-card.featured p { color: white; }
+.about-card.featured p { color: rgba(255,255,255,.65); }
+.ac-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+.about-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: .95rem; font-weight: 800;
+  margin-bottom: 6px; color: var(--dark);
+}
+.about-card p { font-size: .83rem; color: var(--text-muted); line-height: 1.6; }
+
+.about-text .section-sub { margin-bottom: 24px; }
+.about-points { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.ap-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--bg); border-radius: 14px; padding: 14px 18px;
+}
+.ap-icon {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0; color: var(--accent-yellow);
+}
+.ap-item h4 { font-size: .88rem; font-weight: 700; margin-bottom: 2px; }
+.ap-item p { font-size: .8rem; color: var(--text-muted); }
+
+/* ─── COURSES ────────────────────────────────────────── */
+#courses { background: var(--bg); }
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.course-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1px solid rgba(0,0,0,.05);
+  position: relative;
+  overflow: hidden;
+  transition: transform .3s, box-shadow .3s;
+  cursor: pointer;
+}
+.course-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.course-card .cc-color-bar {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 5px;
+  border-radius: 5px 5px 0 0;
+}
+.cc-icon { font-size: 2.2rem; margin-bottom: 14px; display: block; }
+.course-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1rem; font-weight: 800;
+  margin-bottom: 8px; color: var(--dark);
+}
+.course-card p { font-size: .83rem; color: var(--text-muted); line-height: 1.65; margin-bottom: 18px; }
+.course-tag {
+  display: inline-flex; align-items: center;
+  background: var(--bg);
+  border-radius: 8px; padding: 4px 12px;
+  font-size: .73rem; font-weight: 700;
+  color: var(--text-muted);
+}
+.course-card.featured-course {
+  background: var(--dark);
+  grid-column: span 2;
+}
+.course-card.featured-course h3,
+.course-card.featured-course p { color: white; }
+.course-card.featured-course p { color: rgba(255,255,255,.6); }
+.course-card.featured-course .course-tag { background: rgba(255,255,255,.1); color: white; }
+.fc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px; }
+.fc-item {
+  background: rgba(255,255,255,.07);
+  border-radius: 12px; padding: 10px 14px;
+  border: 1px solid rgba(255,255,255,.08);
+  display: flex; align-items: center; gap: 8px;
+  color: rgba(255,255,255,.85); font-size: .82rem; font-weight: 600;
+}
+
+/* ─── WHY CHOOSE ─────────────────────────────────────── */
+#why { background: white; }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1px solid rgba(0,0,0,.05);
+  transition: transform .3s, box-shadow .3s;
+}
+.why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.wc-icon {
+  width: 48px; height: 48px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; margin-bottom: 14px;
+}
+.why-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: .97rem; font-weight: 800;
+  margin-bottom: 8px; color: var(--dark);
+}
+.why-card p { font-size: .83rem; color: var(--text-muted); line-height: 1.65; }
+
+/* IELTS Modules strip */
+.ielts-strip {
+  margin-top: 50px;
+  background: var(--dark);
+  border-radius: var(--radius-lg);
+  padding: 36px 44px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.ielts-module {
+  display: flex; flex-direction: column; align-items: center;
+  gap: 8px; text-align: center;
+}
+.im-icon { font-size: 2rem; }
+.im-label {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800; font-size: .97rem;
+  color: white;
+}
+.im-desc { font-size: .78rem; color: rgba(255,255,255,.55); }
+
+/* ─── TESTIMONIALS ───────────────────────────────────── */
+#testimonials { background: var(--bg); }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.testi-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  border: 1px solid rgba(0,0,0,.05);
+  position: relative;
+  transition: transform .3s, box-shadow .3s;
+}
+.testi-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.testi-card.featured-t { background: var(--dark); }
+.testi-card.featured-t .tc-text,
+.testi-card.featured-t .tc-name { color: white; }
+.testi-card.featured-t .tc-course { color: rgba(255,255,255,.55); }
+.tc-band {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent-yellow);
+  border-radius: 100px; padding: 4px 14px;
+  font-size: .76rem; font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 14px;
+}
+.tc-band.green { background: var(--accent-green); }
+.tc-band.blue { background: var(--accent-blue); }
+.tc-avatar {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+  border: 3px solid rgba(0,0,0,.06);
+}
+.featured-t .tc-avatar { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.1); }
+.stars { color: var(--accent-yellow); margin-bottom: 10px; font-size: .95rem; letter-spacing: 2px; }
+.tc-text { font-size: .85rem; line-height: 1.7; color: var(--text-muted); margin-bottom: 18px; }
+.tc-name { font-weight: 800; font-size: .9rem; color: var(--dark); }
+.tc-course { font-size: .78rem; color: var(--text-muted); }
+.tc-quote { position: absolute; top: 18px; right: 22px; font-size: 3rem; color: rgba(0,0,0,.04); font-family: serif; line-height: 1; }
+.featured-t .tc-quote { color: rgba(255,255,255,.06); }
+
+/* ─── DEMO FORM ──────────────────────────────────────── */
+#demo {
+  background: var(--dark);
+  position: relative;
+  overflow: hidden;
+}
+#demo::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: rgba(255,212,59,.07);
+}
+#demo::after {
+  content: '';
+  position: absolute;
+  bottom: -150px; left: -150px;
+  width: 450px; height: 450px;
+  border-radius: 50%;
+  background: rgba(105,219,124,.06);
+}
+.demo-inner {
+  position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 70px; align-items: center;
+}
+.demo-text .section-label { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.1); color: rgba(255,255,255,.6); }
+.demo-text .section-h2 { color: white; }
+.demo-text .section-sub { color: rgba(255,255,255,.55); }
+.demo-perks { display: flex; flex-direction: column; gap: 12px; }
+.dp-item { display: flex; align-items: center; gap: 12px; }
+.dp-check {
+  width: 26px; height: 26px; border-radius: 8px;
+  background: rgba(255,212,59,.15);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: .85rem; color: var(--accent-yellow);
+  font-weight: 800;
+}
+.dp-item span { font-size: .88rem; font-weight: 600; color: rgba(255,255,255,.8); }
+
+.demo-form {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 36px;
+}
+.demo-form h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.3rem; font-weight: 800;
+  margin-bottom: 6px;
+}
+.demo-form p { font-size: .86rem; color: var(--text-muted); margin-bottom: 24px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block; font-size: .8rem; font-weight: 700;
+  color: var(--dark); margin-bottom: 6px;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid rgba(0,0,0,.07);
+  border-radius: 12px;
+  padding: 11px 15px;
+  font-family: 'Manrope', sans-serif;
+  font-size: .88rem;
+  color: var(--dark);
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--accent-yellow);
+  box-shadow: 0 0 0 3px rgba(255,212,59,.15);
+}
+
+/* ─── FACULTY ────────────────────────────────────────── */
+#faculty { background: white; }
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.faculty-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.05);
+  transition: transform .3s, box-shadow .3s;
+}
+.faculty-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-md); }
+.fac-avatar {
+  width: 76px; height: 76px; border-radius: 50%;
+  background: var(--dark);
+  margin: 0 auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2rem;
+  border: 4px solid white;
+  box-shadow: 0 4px 16px rgba(0,0,0,.1);
+}
+.fac-badge {
+  display: inline-block;
+  background: var(--accent-yellow);
+  color: var(--dark);
+  padding: 3px 12px;
+  border-radius: 100px;
+  font-size: .7rem; font-weight: 800;
+  margin-bottom: 10px;
+}
+.faculty-card h3 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800; font-size: .97rem;
+  margin-bottom: 4px;
+}
+.faculty-card .fac-role { font-size: .8rem; font-weight: 700; color: var(--text-muted); margin-bottom: 10px; }
+.faculty-card p { font-size: .81rem; color: var(--text-muted); line-height: 1.65; }
+
+/* ─── STUDY MATERIAL ─────────────────────────────────── */
+#material { background: var(--bg); }
+.material-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.mat-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 20px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.05);
+  transition: transform .3s, box-shadow .3s;
+}
+.mat-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+.mat-icon { font-size: 2.6rem; margin-bottom: 12px; display: block; }
+.mat-card h3 { font-family: 'Sora', sans-serif; font-weight: 800; font-size: .92rem; margin-bottom: 6px; }
+.mat-card p { font-size: .8rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ─── GALLERY ────────────────────────────────────────── */
+#gallery { background: white; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 14px;
+}
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+  background: var(--bg);
+  aspect-ratio: 1;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  border: 1px solid rgba(0,0,0,.05);
+  cursor: pointer;
+  transition: transform .3s;
+}
+.gallery-item:hover { transform: scale(1.03); }
+.gallery-item.tall { grid-row: span 2; aspect-ratio: auto; min-height: 300px; }
+.gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+.gallery-overlay {
+  position: absolute; inset: 0;
+  background: rgba(26,26,46,.6);
+  display: flex; align-items: flex-end;
+  padding: 18px;
+  opacity: 0; transition: opacity .3s;
+}
+.gallery-item:hover .gallery-overlay { opacity: 1; }
+.gallery-overlay span { color: white; font-weight: 700; font-size: .86rem; }
+.gi-bg { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.gi-label {
+  position: absolute; bottom: 10px; left: 10px;
+  background: rgba(255,255,255,.92);
+  border-radius: 8px; padding: 4px 10px;
+  font-size: .72rem; font-weight: 700; color: var(--dark);
+  display: flex; align-items: center; gap: 5px;
+}
+
+/* ─── FAQ ────────────────────────────────────────────── */
+#faq { background: var(--bg); }
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 70px; align-items: start;
+}
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,.05);
+  overflow: hidden;
+  transition: box-shadow .2s;
+}
+.faq-item:hover { box-shadow: var(--shadow); }
+.faq-q {
+  padding: 18px 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer;
+  font-weight: 700; font-size: .9rem;
+  color: var(--dark);
+  user-select: none;
+  gap: 12px;
+}
+.faq-arrow {
+  width: 28px; height: 28px; flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .75rem;
+  transition: transform .3s, background .2s;
+}
+.faq-item.open .faq-arrow { transform: rotate(180deg); background: var(--accent-yellow); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height .35s ease, padding .35s;
+  font-size: .86rem; color: var(--text-muted);
+  line-height: 1.7; padding: 0 22px;
+}
+.faq-item.open .faq-a { max-height: 220px; padding: 0 22px 18px; }
+
+/* ─── CONTACT ────────────────────────────────────────── */
+#contact { background: white; }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 56px; align-items: start;
+}
+.contact-info { display: flex; flex-direction: column; gap: 14px; }
+.ci-card {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex; align-items: flex-start; gap: 12px;
+  border: 1px solid rgba(0,0,0,.05);
+}
+.ci-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--dark);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; flex-shrink: 0;
+}
+.ci-card h4 { font-size: .83rem; font-weight: 800; margin-bottom: 3px; }
+.ci-card a,
+.ci-card p { font-size: .83rem; color: var(--text-muted); text-decoration: none; }
+.ci-card a:hover { color: var(--dark); }
+
+.map-embed {
+  background: var(--bg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 200px;
+  border: 1px solid rgba(0,0,0,.05);
+  margin-top: 14px;
+}
+.map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+
+.contact-form-wrap h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.25rem; font-weight: 800; margin-bottom: 6px;
+}
+.contact-form-wrap > p { font-size: .86rem; color: var(--text-muted); margin-bottom: 22px; }
+.cf-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+textarea.form-input {
+  width: 100%;
+  background: var(--bg);
+  border: 1.5px solid rgba(0,0,0,.07);
+  border-radius: 12px;
+  padding: 11px 15px;
+  font-family: 'Manrope', sans-serif;
+  font-size: .88rem; color: var(--dark);
+  outline: none; resize: vertical; min-height: 90px;
+  transition: border-color .2s, box-shadow .2s;
+}
+textarea.form-input:focus {
+  border-color: var(--accent-yellow);
+  box-shadow: 0 0 0 3px rgba(255,212,59,.15);
+}
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer {
+  background: var(--dark);
+  padding: 56px 5% 28px;
+  color: rgba(255,255,255,.6);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 44px;
+  margin-bottom: 44px;
+}
+.footer-brand h2 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 800; font-size: 1.1rem;
+  color: white; margin-bottom: 10px;
+}
+.footer-brand p { font-size: .83rem; line-height: 1.7; max-width: 280px; margin-bottom: 18px; }
+.footer-social { display: flex; gap: 10px; }
+.social-btn {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .97rem; text-decoration: none; color: white;
+  transition: background .2s, transform .2s;
+}
+.social-btn:hover { background: var(--accent-yellow); color: var(--dark); transform: translateY(-2px); }
+.footer-col h4 { font-size: .86rem; font-weight: 800; color: white; margin-bottom: 14px; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.footer-col ul li a {
+  font-size: .82rem; color: rgba(255,255,255,.5); text-decoration: none;
+  transition: color .2s;
+}
+.footer-col ul li a:hover { color: white; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 22px;
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: .8rem; flex-wrap: wrap; gap: 8px;
+}
+.footer-bottom span { color: var(--accent-yellow); }
+
+/* Floating WA Button */
+.float-wa {
+  position: fixed; bottom: 24px; right: 24px; z-index: 998;
+  width: 56px; height: 56px; border-radius: 50%;
+  background: #25D366;
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 28px rgba(37,211,102,.5);
+  font-size: 1.6rem;
+  transition: transform .2s, box-shadow .2s;
+  animation: pulse-wa 2s ease-in-out infinite;
+}
+.float-wa:hover { transform: scale(1.1); box-shadow: 0 12px 36px rgba(37,211,102,.6); }
+@keyframes pulse-wa {
+  0%,100% { box-shadow: 0 8px 28px rgba(37,211,102,.5); }
+  50% { box-shadow: 0 8px 40px rgba(37,211,102,.75), 0 0 0 10px rgba(37,211,102,.1); }
+}
+
+/* ─── MOBILE NAV ─────────────────────────────────────── */
+.mobile-menu {
+  display: none;
+  position: fixed; top: 64px; left: 0; right: 0; z-index: 998;
+  background: white;
+  padding: 16px 5%;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  flex-direction: column; gap: 4px;
+  box-shadow: var(--shadow-md);
+  max-height: calc(100vh - 64px);
+  overflow-y: auto;
+}
+.mobile-menu a {
+  font-weight: 600; color: var(--text); text-decoration: none;
+  font-size: .95rem; padding: 12px 4px;
+  border-bottom: 1px solid rgba(0,0,0,.04);
+  display: flex; align-items: center; gap: 8px;
+}
+.mobile-menu a:last-child { border-bottom: none; }
+.mobile-menu.active { display: flex; }
+
+/* ─── TOAST ──────────────────────────────────────────── */
+.toast {
+  position: fixed; bottom: 90px; right: 20px; z-index: 9999;
+  background: var(--dark); color: white;
+  padding: 13px 22px; border-radius: 14px;
+  font-weight: 700; font-size: .88rem;
+  box-shadow: var(--shadow-md);
+  display: flex; align-items: center; gap: 10px;
+  transform: translateY(20px); opacity: 0;
+  transition: all .35s ease;
+  pointer-events: none;
+  max-width: calc(100vw - 40px);
+}
+.toast.show { transform: translateY(0); opacity: 1; }
+
+/* ─── FADE IN ANIMATION ──────────────────────────────── */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity: 1; transform: none; }
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE BREAKPOINTS
+═══════════════════════════════════════════════════════ */
+
+/* TABLET: 768px – 1024px */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 0; }
+
+  .hero-visual {
+    display: block;
+    height: 360px;
+    margin-top: 36px;
+  }
+  .float-badge.f1 { top: -12px; right: 10px; }
+  .float-badge.f3 { display: none; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 0; }
+  .about-visual { display: none; }
+
+  .courses-grid { grid-template-columns: repeat(2, 1fr); }
+  .course-card.featured-course { grid-column: span 2; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
+  .demo-inner { grid-template-columns: 1fr; gap: 50px; }
+  .faculty-grid { grid-template-columns: repeat(2, 1fr); }
+  .material-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item.wide { grid-column: span 2; }
+  .gallery-item.tall { grid-row: span 1; aspect-ratio: 1; }
+  .faq-layout { grid-template-columns: 1fr; gap: 40px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .ielts-strip { grid-template-columns: repeat(2, 1fr); padding: 32px; }
+}
+
+/* MOBILE: ≤ 680px */
+@media (max-width: 680px) {
+  /* Nav */
+  nav { padding: 0 4%; height: 60px; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .nav-logo { font-size: .88rem; }
+  .logo-badge { padding: 3px 8px; font-size: .68rem; }
+  .mobile-menu { top: 60px; padding: 12px 4%; }
+
+  /* Hero */
+  #hero {
+    padding: 76px 4% 48px;
+    min-height: auto;
+    align-items: flex-start;
+  }
+  .hero-bg-shape.s1 { width: 300px; height: 300px; top: -50px; right: -80px; }
+  .hero-bg-shape.s2 { width: 250px; height: 250px; bottom: -40px; left: -60px; }
+
+  .hero-grid { gap: 0; }
+  .hero-tag { font-size: .72rem; padding: 5px 12px; margin-bottom: 16px; }
+  .hero-h1 { font-size: 2rem; margin-bottom: 14px; }
+  .hero-sub { font-size: .9rem; margin-bottom: 22px; }
+
+  /* Hero buttons – stack on very small screens */
+  .hero-btns {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .hero-btns a,
+  .hero-btns button {
+    width: 100%;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: .88rem;
+  }
+
+  /* Hero stats */
+  .hero-stats { gap: 20px; flex-wrap: nowrap; }
+  .stat-num { font-size: 1.5rem; }
+  .stat-label { font-size: .72rem; }
+
+  /* Hero image – full-width card, shorter height */
+  .hero-visual {
+    display: block;
+    height: 240px;
+    margin-top: 28px;
+    position: relative;
+  }
+  .hero-image-card {
+    border-radius: 20px;
+  }
+  .hero-image-overlay { padding: 16px 18px; }
+  .hero-image-title { font-size: .97rem; }
+  .hero-image-loc { font-size: .74rem; }
+  .hc-tag { font-size: .68rem; padding: 4px 10px; }
+
+  /* Float badges – reposition for mobile */
+  .float-badge {
+    padding: 7px 12px;
+    font-size: .72rem;
+    border-radius: 10px;
+    gap: 6px;
+  }
+  .float-badge.f1 {
+    top: -12px;
+    right: 10px;
+  }
+  .float-badge.f3 { display: none; }
+  .badge-icon { font-size: 1rem; }
+
+  /* Sections */
+  section { padding: 56px 4%; }
+
+  .section-h2 { font-size: 1.6rem; }
+  .section-sub { font-size: .88rem; margin-bottom: 28px; }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary, .btn-wa {
+    padding: 12px 20px;
+    font-size: .88rem;
+  }
+
+  /* About */
+  .about-text .section-sub { margin-bottom: 20px; }
+  .ap-item { padding: 12px 14px; }
+  .ap-item h4 { font-size: .85rem; }
+
+  /* Courses */
+  .courses-grid { grid-template-columns: 1fr; gap: 16px; }
+  .course-card.featured-course { grid-column: span 1; }
+  .fc-grid { grid-template-columns: 1fr; gap: 8px; }
+  .fc-item { font-size: .8rem; }
+
+  /* Why */
+  .why-grid { grid-template-columns: 1fr; gap: 14px; }
+  .ielts-strip {
+    grid-template-columns: 1fr 1fr;
+    padding: 24px 20px;
+    gap: 16px;
+    border-radius: var(--radius);
+    margin-top: 36px;
+  }
+  .im-label { font-size: .88rem; }
+  .im-desc { font-size: .72rem; }
+
+  /* Testimonials */
+  .testi-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  /* Demo form */
+  .demo-inner { gap: 36px; }
+  .demo-form { padding: 24px 20px; border-radius: 20px; }
+  .demo-form h3 { font-size: 1.15rem; }
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+  .demo-perks { gap: 10px; }
+  .dp-item span { font-size: .84rem; }
+  .demo-text .section-sub { margin-bottom: 20px; }
+
+  /* Faculty */
+  .faculty-grid { grid-template-columns: 1fr; gap: 16px; }
+
+  /* Material */
+  .material-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .mat-card { padding: 22px 16px; }
+  .mat-icon { font-size: 2.2rem; }
+
+  /* Gallery */
+  .gallery-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .gallery-item.wide { grid-column: span 2; aspect-ratio: 2/1; }
+  .gallery-item.tall { grid-row: span 1; aspect-ratio: 1; }
+  .gi-label { font-size: .68rem; padding: 3px 8px; }
+
+  /* FAQ */
+  .faq-layout { gap: 30px; }
+  .faq-q { font-size: .86rem; padding: 15px 18px; }
+  .faq-a { font-size: .83rem; }
+
+  /* Contact */
+  .contact-grid { gap: 32px; }
+  .cf-grid { grid-template-columns: 1fr; gap: 0; }
+  .ci-card { padding: 14px 16px; }
+
+  /* Footer */
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand p { max-width: 100%; }
+  footer { padding: 44px 4% 24px; }
+  .footer-bottom { flex-direction: column; text-align: center; gap: 6px; }
+
+  /* Floating WA */
+  .float-wa {
+    bottom: 18px; right: 18px;
+    width: 50px; height: 50px;
+    font-size: 1.4rem;
+  }
+
+  /* Toast */
+  .toast { right: 12px; bottom: 80px; font-size: .82rem; padding: 11px 16px; }
+}
+
+/* Very small screens (≤ 380px) */
+@media (max-width: 380px) {
+  .hero-h1 { font-size: 1.75rem; }
+  .hero-stats { gap: 14px; }
+  .stat-num { font-size: 1.3rem; }
+  .hero-visual { height: 210px; }
+  .material-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: 1fr; }
+  .gallery-item.wide { grid-column: span 1; aspect-ratio: 4/3; }
+  .ielts-strip { grid-template-columns: 1fr; }
+  nav { padding: 0 3%; }
+  section { padding: 48px 3%; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    <span class="logo-badge">THC</span>
+    THE HOWARD'S COUNCIL
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#demo" class="nav-cta">Free Demo</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMobile()">📖 About</a>
+  <a href="#courses" onclick="closeMobile()">🎯 Courses</a>
+  <a href="#why" onclick="closeMobile()">⭐ Why Us</a>
+  <a href="#testimonials" onclick="closeMobile()">🏆 Results</a>
+  <a href="#demo" onclick="closeMobile()">🎓 Free Demo</a>
+  <a href="#contact" onclick="closeMobile()">📍 Contact</a>
+  <a href="https://wa.me/919997756675" target="_blank" style="color:#25D366;border-bottom:none;background:#f0fff4;border-radius:10px;padding:12px 12px;margin-top:4px;">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us Now
+  </a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-shape s1"></div>
+  <div class="hero-bg-shape s2"></div>
+  <div class="hero-grid container">
+    <div class="hero-text">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Meerut's Most Trusted IELTS Institute · 4.6★ (385 Reviews)
+      </div>
+      <h1 class="hero-h1">
+        Build <span class="hl-yellow">Strong English</span><br/>
+        Skills for a<br/>
+        <span class="hl-green">Bright Future</span>
+      </h1>
+      <p class="hero-sub">
+        IELTS &amp; Spoken English coaching for young learners by <span class="brush-stroke">certified experts</span>. Proven results, personal attention, flexible batches in Meerut.
+      </p>
+      <div class="hero-btns">
+        <a href="#demo" class="btn-primary">
+          <i class="fa-solid fa-graduation-cap"></i>
+          Free Demo Class
+        </a>
+        <a href="#courses" class="btn-secondary">
+          <i class="fa-solid fa-book-open" style="color:#3b82f6;"></i>
+          Enroll Now →
+        </a>
+        <a href="https://wa.me/919997756675" class="btn-wa" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+          WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">500<span>+</span></div>
+          <div class="stat-label">Students Coached</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">8<span>.0</span></div>
+          <div class="stat-label">Highest Band Score</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">10<span>+</span></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero visual -->
+    <div class="hero-visual">
+      <div class="hero-image-card">
+        <img
+          src="images/studentsimage.png"
+          alt="Students at The Howard's Council"
+          onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)';"
+        />
+        <div class="hero-image-overlay">
+          <div class="hero-image-tags">
+            <span class="hc-tag yellow">IELTS</span>
+            <span class="hc-tag">Spoken English</span>
+            <span class="hc-tag">OET Prep</span>
+            <span class="hc-tag">Spanish</span>
+          </div>
+          <div class="hero-image-title">
+            Your Journey to <span style="color:var(--accent-yellow)">Band 8.0</span> Starts Here
+          </div>
+          <div class="hero-image-loc">📍 618, Shiv Mandir Lane, Begum Bagh, Meerut</div>
+        </div>
+      </div>
+      <!-- Floating badges positioned relative to .hero-visual -->
+      <div class="float-badge f1">
+        <span class="badge-icon">🏆</span>
+        <div>
+          <div style="font-weight:800;font-size:.82rem">Band 8.0</div>
+          <div style="font-size:.72rem;color:var(--text-muted)">Priya – IELTS</div>
+        </div>
+      </div>
+      <div class="float-badge f3">
+        <span class="badge-icon">📍</span>
+        <div>
+          <div style="font-weight:800;font-size:.82rem">Meerut</div>
+          <div style="font-size:.72rem;color:var(--text-muted)">Begum Bagh</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-card featured">
+          <span class="ac-icon">🎯</span>
+          <div>
+            <h3>Our Mission</h3>
+            <p>Empower every student with world-class English communication skills and IELTS expertise to unlock global opportunities.</p>
+          </div>
+        </div>
+        <div class="about-card">
+          <span class="ac-icon">👨‍🏫</span>
+          <h3>Certified Trainers</h3>
+          <p>Industry-certified faculty with years of hands-on IELTS coaching experience.</p>
+        </div>
+        <div class="about-card">
+          <span class="ac-icon">⭐</span>
+          <h3>Meerut's Best</h3>
+          <p>4.6★ rated institute with 385+ genuine Google reviews from happy students.</p>
+        </div>
+        <div class="about-card">
+          <span class="ac-icon">🌍</span>
+          <h3>Overseas Guidance</h3>
+          <p>Complete overseas education consulting alongside IELTS, OET &amp; Spanish classes.</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">✦ About The Institute</div>
+        <h2 class="section-h2">Who We Are &amp; Why <span class="hl-orange">Students Choose Us</span></h2>
+        <p class="section-sub">The Howard's Council is Meerut's premier English coaching center, specializing in IELTS preparation, Spoken English, OET, and Spanish. We combine proven methodology with personal attention to deliver real results.</p>
+        <div class="about-points">
+          <div class="ap-item">
+            <div class="ap-icon"><i class="fa-solid fa-building-columns"></i></div>
+            <div>
+              <h4>10+ Years of Teaching Excellence</h4>
+              <p>Decades of combined expertise helping hundreds of students achieve their dream band scores.</p>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-icon"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <h4>Small Batches, Big Results</h4>
+              <p>Limited batch sizes ensure every student gets personal attention and focused feedback.</p>
+            </div>
+          </div>
+          <div class="ap-item">
+            <div class="ap-icon"><i class="fa-solid fa-arrow-up-right-dots"></i></div>
+            <div>
+              <h4>Proven Track Record</h4>
+              <p>500+ students coached, highest band score of 8.0, with consistent 7+ band achievers.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#demo" class="btn-primary">Book a Free Demo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+  <div class="container">
+    <div class="section-label">✦ Our Programs</div>
+    <h2 class="section-h2">Courses <span class="hl-blue">Offered</span></h2>
+    <p class="section-sub">Comprehensive programs designed for every learner — from beginners to advanced IELTS aspirants.</p>
+    <div class="courses-grid">
+      <div class="course-card featured-course fade-in">
+        <div class="cc-color-bar" style="background:var(--accent-yellow)"></div>
+        <span class="cc-icon">🎯</span>
+        <h3>IELTS <span class="hl-yellow" style="font-size:1rem">Preparation</span></h3>
+        <p>Our flagship program covering all four modules. Mock tests, band-scoring, official exam strategies, and personalised feedback sessions.</p>
+        <div class="fc-grid">
+          <div class="fc-item"><i class="fa-solid fa-ear-listen" style="color:#74C0FC;"></i> Listening</div>
+          <div class="fc-item"><i class="fa-solid fa-book-open" style="color:#FFD43B;"></i> Reading</div>
+          <div class="fc-item"><i class="fa-solid fa-file-pen" style="color:#F783AC;"></i> Writing</div>
+          <div class="fc-item"><i class="fa-solid fa-microphone-lines" style="color:#69DB7C;"></i> Speaking</div>
+        </div>
+        <div style="margin-top:18px"><span class="course-tag">12 Weeks · Academic &amp; General</span></div>
+      </div>
+      <div class="course-card fade-in">
+        <div class="cc-color-bar" style="background:var(--accent-green)"></div>
+        <span class="cc-icon"><i class="fa-solid fa-comments" style="color:#69DB7C;"></i></span>
+        <h3>Spoken English</h3>
+        <p>Build confident everyday communication, fluency, and pronunciation through interactive speaking sessions and role plays.</p>
+        <span class="course-tag">8 Weeks · All Ages</span>
+      </div>
+      <div class="course-card fade-in">
+        <div class="cc-color-bar" style="background:var(--accent-blue)"></div>
+        <span class="cc-icon"><i class="fa-solid fa-file-pen" style="color:#74C0FC;"></i></span>
+        <h3>Grammar Foundation</h3>
+        <p>Master tenses, sentence structure, clauses and advanced grammar rules through structured daily practice.</p>
+        <span class="course-tag">6 Weeks · Beginner–Intermediate</span>
+      </div>
+      <div class="course-card fade-in">
+        <div class="cc-color-bar" style="background:var(--accent-pink)"></div>
+        <span class="cc-icon"><i class="fa-solid fa-book" style="color:#F783AC;"></i></span>
+        <h3>Vocabulary Building</h3>
+        <p>Expand your word bank with IELTS-specific vocabulary, collocations, and daily word-building exercises.</p>
+        <span class="course-tag">4 Weeks · Ongoing</span>
+      </div>
+      <div class="course-card fade-in">
+        <div class="cc-color-bar" style="background:var(--accent-orange)"></div>
+        <span class="cc-icon"><i class="fa-solid fa-pencil" style="color:#FFA94D;"></i></span>
+        <h3>Reading &amp; Writing Skills</h3>
+        <p>Develop analytical reading and Task 1 &amp; Task 2 writing skills. Essay correction with detailed feedback.</p>
+        <span class="course-tag">6 Weeks · Intermediate</span>
+      </div>
+      <div class="course-card fade-in">
+        <div class="cc-color-bar" style="background:#b197fc"></div>
+        <span class="cc-icon"><i class="fa-solid fa-star" style="color:#b197fc;"></i></span>
+        <h3>Personality Development</h3>
+        <p>Public speaking, interview preparation, body language, and leadership communication for modern professionals.</p>
+        <span class="course-tag">4 Weeks · All Levels</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE -->
+<section id="why">
+  <div class="container">
+    <div class="section-label">✦ Our Edge</div>
+    <h2 class="section-h2">Why <span class="hl-pink">Choose Us?</span></h2>
+    <p class="section-sub">We go beyond textbooks — our approach is student-first, results-focused, and designed for real-world success.</p>
+    <div class="why-grid">
+      <div class="why-card fade-in">
+        <div class="wc-icon" style="background:rgba(255,212,59,.2)"><i class="fa-solid fa-award" style="color:#b8860b;"></i></div>
+        <h3>Certified Trainers</h3>
+        <p>All faculty are professionally certified IELTS educators with proven track records and ongoing training.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon" style="background:rgba(105,219,124,.2)"><i class="fa-solid fa-users" style="color:#2d8c3e;"></i></div>
+        <h3>Small Batch Sizes</h3>
+        <p>Maximum 10–12 students per batch ensures every learner gets the attention they deserve.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon" style="background:rgba(116,192,252,.2)"><i class="fa-solid fa-lightbulb" style="color:#1a73e8;"></i></div>
+        <h3>Interactive Classes</h3>
+        <p>Engaging activities, debates, group discussions, and role-plays make learning effective and enjoyable.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon" style="background:rgba(247,131,172,.2)"><i class="fa-solid fa-chart-bar" style="color:#c2185b;"></i></div>
+        <h3>Weekly Assessments</h3>
+        <p>Regular mock tests and progress reports so you always know where you stand and what to improve.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon" style="background:rgba(255,169,77,.2)"><i class="fa-solid fa-handshake" style="color:#e65100;"></i></div>
+        <h3>Personal Attention</h3>
+        <p>One-on-one feedback sessions, personalised study plans, and dedicated mentorship throughout your course.</p>
+      </div>
+      <div class="why-card fade-in">
+        <div class="wc-icon" style="background:rgba(177,151,252,.2)"><i class="fa-solid fa-clock" style="color:#6a1b9a;"></i></div>
+        <h3>Flexible Timings</h3>
+        <p>Morning, evening, and weekend batches to fit your school, college, or work schedule seamlessly.</p>
+      </div>
+    </div>
+
+    <!-- IELTS Modules strip -->
+    <div class="ielts-strip fade-in">
+      <div class="ielts-module">
+        <span class="im-icon"><i class="fa-solid fa-ear-listen" style="color:#74C0FC;font-size:2rem;"></i></span>
+        <div class="im-label">Listening</div>
+        <div class="im-desc">40 questions · 30 mins audio</div>
+      </div>
+      <div class="ielts-module">
+        <span class="im-icon"><i class="fa-solid fa-book-open" style="color:#FFD43B;font-size:2rem;"></i></span>
+        <div class="im-label">Reading</div>
+        <div class="im-desc">40 questions · 60 mins</div>
+      </div>
+      <div class="ielts-module">
+        <span class="im-icon"><i class="fa-solid fa-pen-to-square" style="color:#F783AC;font-size:2rem;"></i></span>
+        <div class="im-label">Writing</div>
+        <div class="im-desc">2 tasks · 60 mins</div>
+      </div>
+      <div class="ielts-module">
+        <span class="im-icon"><i class="fa-solid fa-microphone" style="color:#69DB7C;font-size:2rem;"></i></span>
+        <div class="im-label">Speaking</div>
+        <div class="im-desc">3 parts · 11–14 mins</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="container">
+    <div class="section-label">✦ Student Success</div>
+    <h2 class="section-h2">Real Results, <span class="hl-green">Real Students</span></h2>
+    <p class="section-sub">Our students consistently achieve their target band scores and realise their international dreams.</p>
+    <div class="testi-grid">
+      <div class="testi-card fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band"><i class="fa-solid fa-trophy" style="color:#b8860b;"></i> Band 7.5</div>
+        <div class="tc-avatar"><i class="fa-solid fa-user-graduate" style="color:#3b82f6;"></i></div>
+        <div class="stars">★★★★★</div>
+        <div class="tc-text">The Howard's Council completely transformed my IELTS preparation. The speaking practice sessions were incredibly helpful — I felt confident on exam day for the first time.</div>
+        <div class="tc-name">Rahul Sharma</div>
+        <div class="tc-course">IELTS Academic · Canada PR</div>
+      </div>
+      <div class="testi-card featured-t fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band green"><i class="fa-solid fa-medal" style="color:#b8860b;"></i> Band 8.0</div>
+        <div class="tc-avatar"><i class="fa-solid fa-user-graduate" style="color:#ec4899;"></i></div>
+        <div class="stars" style="color:var(--accent-green)">★★★★★</div>
+        <div class="tc-text">I scored Band 8.0 in my first attempt! The writing task feedback and vocabulary modules were exceptional. Best coaching in Meerut without any doubt.</div>
+        <div class="tc-name">Priya Verma</div>
+        <div class="tc-course">IELTS Academic · UK University</div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band blue"><i class="fa-solid fa-bullseye" style="color:#1a73e8;"></i> Band 7.0</div>
+        <div class="tc-avatar"><i class="fa-solid fa-user-tie" style="color:#2563eb;"></i></div>
+        <div class="stars" style="color:var(--accent-blue)">★★★★★</div>
+        <div class="tc-text">Small batches meant my teacher actually knew my weak points. After just 3 months of coaching, I cleared my listening and reading in Band 7+ easily.</div>
+        <div class="tc-name">Aman Khan</div>
+        <div class="tc-course">IELTS General · Australia Migration</div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band" style="background:var(--accent-orange)">📖 Spoken English</div>
+        <div class="tc-avatar"><i class="fa-solid fa-user-graduate" style="color:#ec4899;"></i></div>
+        <div class="stars">★★★★★</div>
+        <div class="tc-text">I was very shy when I joined. Within 2 months the spoken English course gave me so much confidence to speak in interviews and presentations.</div>
+        <div class="tc-name">Sneha Gupta</div>
+        <div class="tc-course">Spoken English · Corporate Job</div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band" style="background:#b197fc;color:var(--dark)"><i class="fa-solid fa-certificate" style="color:#b8860b;"></i> OET Pass</div>
+        <div class="tc-avatar"><i class="fa-solid fa-user-doctor" style="color:#8b5cf6;"></i></div>
+        <div class="stars">★★★★★</div>
+        <div class="tc-text">As a nurse preparing for OET, I found the specialized medical English coaching here absolutely top-notch. Cleared OET B in my second attempt.</div>
+        <div class="tc-name">Dr. Naveen Singh</div>
+        <div class="tc-course">OET Preparation · UK Nursing</div>
+      </div>
+      <div class="testi-card fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band green"><i class="fa-solid fa-chart-column" style="color:#2d8c3e;"></i> Band 7.5</div>
+        <div class="tc-avatar"><i class="fa-solid fa-laptop-code" style="color:#ec4899;"></i></div>
+        <div class="stars" style="color:var(--accent-green)">★★★★★</div>
+        <div class="tc-text">Good management, wonderful teachers, and a great atmosphere. The weekly mock tests really kept me on track. Highly recommend to everyone in Meerut!</div>
+        <div class="tc-name">Ritu Agarwal</div>
+        <div class="tc-course">IELTS General · New Zealand</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO FORM -->
+<section id="demo">
+  <div class="container">
+    <div class="demo-inner">
+      <div class="demo-text fade-in">
+        <div class="section-label">✦ Free Demo Class</div>
+        <h2 class="section-h2"><span class="hl-yellow" style="color:white">Book Your</span><br/>Free Demo Class</h2>
+        <p class="section-sub">Experience our teaching style before committing. No fees, no pressure — just learning.</p>
+        <div class="demo-perks">
+          <div class="dp-item"><div class="dp-check">✓</div><span>Live demo with experienced IELTS trainer</span></div>
+          <div class="dp-item"><div class="dp-check">✓</div><span>Free English level assessment</span></div>
+          <div class="dp-item"><div class="dp-check">✓</div><span>Personalised study plan discussion</span></div>
+          <div class="dp-item"><div class="dp-check">✓</div><span>No obligation to enroll</span></div>
+          <div class="dp-item"><div class="dp-check">✓</div><span>Meet our faculty and see the campus</span></div>
+        </div>
+        <div style="margin-top:28px">
+          <a href="https://wa.me/919997756675?text=Hi%2C%20I%20want%20to%20book%20a%20free%20demo%20class%20at%20The%20Howard%27s%20Council" class="btn-wa" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Book via WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="demo-form fade-in">
+        <h3>Register for <span class="hl-yellow">Free Demo</span></h3>
+        <p>Fill in your details and we'll reach out within 24 hours.</p>
+        <form id="demoForm" onsubmit="submitDemo(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Student Name *</label>
+              <input type="text" id="dname" placeholder="Your full name" required/>
+            </div>
+            <div class="form-group">
+              <label>Age *</label>
+              <input type="number" id="dage" placeholder="e.g. 18" min="10" max="60" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" id="dphone" placeholder="+91 99977 56675" required/>
+          </div>
+          <div class="form-group">
+            <label>Course Interested In *</label>
+            <select id="dcourse" required>
+              <option value="">Select a course...</option>
+              <option>IELTS Preparation (Academic)</option>
+              <option>IELTS Preparation (General)</option>
+              <option>Spoken English</option>
+              <option>Grammar Foundation</option>
+              <option>Vocabulary Building</option>
+              <option>Reading &amp; Writing Skills</option>
+              <option>Personality Development</option>
+              <option>OET Preparation</option>
+              <option>Spanish Language</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Preferred Batch Timing</label>
+            <select id="dtiming">
+              <option value="">Any timing works</option>
+              <option>Morning (8 AM – 11 AM)</option>
+              <option>Afternoon (12 PM – 3 PM)</option>
+              <option>Evening (4 PM – 7 PM)</option>
+              <option>Weekend Batch</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:6px">
+            🎓 Book My Free Demo
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty">
+  <div class="container">
+    <div class="section-label">✦ Meet Our Educators</div>
+    <h2 class="section-h2">Expert <span class="hl-blue">Faculty</span></h2>
+    <p class="section-sub">Learn from India's finest certified IELTS trainers and English language experts who are passionate about student success.</p>
+    <div class="faculty-grid">
+      <div class="faculty-card fade-in">
+        <div class="fac-avatar"><i class="fa-solid fa-user-graduate" style="color:#FFD43B;font-size:1.8rem;"></i></div>
+        <div class="fac-badge">IELTS Expert</div>
+        <h3>Ms. Anjali Howard</h3>
+        <div class="fac-role">Founder &amp; Head Trainer</div>
+        <p>10+ years of IELTS coaching experience. Cambridge-certified trainer specialising in Academic Writing and Speaking modules. Helped 300+ students achieve Band 7+.</p>
+      </div>
+      <div class="faculty-card fade-in">
+        <div class="fac-avatar"><i class="fa-solid fa-user-tie" style="color:#69DB7C;font-size:1.8rem;"></i></div>
+        <div class="fac-badge">Spoken English</div>
+        <h3>Mr. Rajesh Kumar</h3>
+        <div class="fac-role">Senior English Trainer</div>
+        <p>MA in English Literature, 8 years teaching Spoken English and Personality Development. Expert in accent reduction, public speaking and interview preparation.</p>
+      </div>
+      <div class="faculty-card fade-in">
+        <div class="fac-avatar"><i class="fa-solid fa-user-tie" style="color:#F783AC;font-size:1.8rem;"></i></div>
+        <div class="fac-badge">OET &amp; Spanish</div>
+        <h3>Ms. Prachi Arora</h3>
+        <div class="fac-role">OET &amp; Spanish Faculty</div>
+        <p>Specialises in OET preparation for healthcare professionals and beginner-to-intermediate Spanish language courses. 6 years of experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STUDY MATERIAL -->
+<section id="material">
+  <div class="container">
+    <div class="section-label">✦ Learning Resources</div>
+    <h2 class="section-h2">Comprehensive <span class="hl-orange">Study Material</span></h2>
+    <p class="section-sub">All study resources are included in your course — no extra purchases needed.</p>
+    <div class="material-grid">
+      <div class="mat-card fade-in">
+        <span class="mat-icon"><i class="fa-solid fa-book-open" style="color:#3b82f6;font-size:2.4rem;"></i></span>
+        <h3>Course Books</h3>
+        <p>Curated IELTS Cambridge official books and supplementary grammar &amp; vocabulary workbooks provided.</p>
+      </div>
+      <div class="mat-card fade-in">
+        <span class="mat-icon"><i class="fa-solid fa-list-check" style="color:#f59e0b;font-size:2.4rem;"></i></span>
+        <h3>Practice Worksheets</h3>
+        <p>Daily worksheets covering all four IELTS modules with answer keys and performance tracking sheets.</p>
+      </div>
+      <div class="mat-card fade-in">
+        <span class="mat-icon"><i class="fa-solid fa-vial" style="color:#8b5cf6;font-size:2.4rem;"></i></span>
+        <h3>Mock Test Series</h3>
+        <p>Full-length timed mock tests simulating actual IELTS exam conditions with detailed band-score analysis.</p>
+      </div>
+      <div class="mat-card fade-in">
+        <span class="mat-icon"><i class="fa-solid fa-marker" style="color:#f97316;font-size:2.4rem;"></i></span>
+        <h3>Vocabulary Notes</h3>
+        <p>Topic-wise IELTS vocabulary notes with collocations, synonyms and sample sentences for all bands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="container">
+    <div class="section-label">✦ Our Campus</div>
+    <h2 class="section-h2">Class <span class="hl-pink">Gallery</span></h2>
+    <p class="section-sub">Peek inside The Howard's Council — vibrant classrooms, active learning, and memorable moments.</p>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item wide" style="background:linear-gradient(135deg,#fff9db,#ffd43b33)">
+        <div class="gi-bg"><i class="fa-solid fa-book-open" style="color:#f59e0b;font-size:3rem;"></i></div>
+        <div class="gi-label"><i class="fa-solid fa-book-open" style="color:#f59e0b;"></i> Classroom Sessions</div>
+        <div class="gallery-overlay"><span>Interactive IELTS Classes</span></div>
+      </div>
+      <div class="gallery-item tall" style="background:linear-gradient(135deg,#ebfbee,#69db7c33)">
+        <div class="gi-bg"><i class="fa-solid fa-microphone-lines" style="font-size:3rem;color:#69DB7C;"></i></div>
+        <div class="gi-label"><i class="fa-solid fa-microphone-lines" style="color:#69DB7C;"></i> Speaking Practice</div>
+        <div class="gallery-overlay"><span>Speaking Module Practice</span></div>
+      </div>
+      <div class="gallery-item tall" style="background:linear-gradient(135deg,#e7f5ff,#74c0fc33)">
+        <div class="gi-bg"><i class="fa-solid fa-trophy" style="font-size:3rem;color:#74C0FC;"></i></div>
+        <div class="gi-label"><i class="fa-solid fa-trophy" style="color:#74C0FC;"></i> Award Ceremonies</div>
+        <div class="gallery-overlay"><span>Student Achievement Awards</span></div>
+      </div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#fff0f6,#f783ac33)">
+        <div class="gi-bg"><i class="fa-solid fa-users" style="font-size:3rem;color:#F783AC;"></i></div>
+        <div class="gi-label"><i class="fa-solid fa-users" style="color:#F783AC;"></i> Group Activities</div>
+        <div class="gallery-overlay"><span>Group Discussion Sessions</span></div>
+      </div>
+      <div class="gallery-item" style="background:linear-gradient(135deg,#fff4e6,#ffa94d33)">
+        <div class="gi-bg"><i class="fa-solid fa-file-pen" style="font-size:3rem;color:#FFA94D;"></i></div>
+        <div class="gi-label"><i class="fa-solid fa-file-pen" style="color:#FFA94D;"></i> Writing Practice</div>
+        <div class="gallery-overlay"><span>IELTS Writing Workshop</span></div>
+      </div>
+      <div class="gallery-item wide" style="background:linear-gradient(135deg,#f3f0ff,#b197fc33)">
+        <div class="gi-bg"><i class="fa-solid fa-graduation-cap" style="font-size:3rem;color:#b197fc;"></i></div>
+        <div class="gi-label"><i class="fa-solid fa-graduation-cap" style="color:#b197fc;"></i> Batch Graduation</div>
+        <div class="gallery-overlay"><span>Graduation &amp; Farewell</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-layout">
+      <div class="faq-side fade-in">
+        <div class="section-label">✦ FAQ</div>
+        <h2 class="section-h2">Frequently <span class="hl-yellow">Asked Questions</span></h2>
+        <p class="section-sub">Got questions? We've got answers. Still confused? WhatsApp us directly.</p>
+        <a href="https://wa.me/919997756675?text=Hi%2C%20I%20have%20a%20question%20about%20The%20Howard%27s%20Council" class="btn-wa" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> Ask on WhatsApp
+        </a>
+      </div>
+      <div class="faq-list fade-in">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is IELTS and why should I prepare for it? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">IELTS (International English Language Testing System) is the world's most popular English proficiency test accepted by 11,000+ organisations in 140+ countries. It is required for immigration, university admissions, and many professional registrations abroad.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is the minimum age to join? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Students from age 12 onwards can join our Spoken English and Grammar Foundation courses. IELTS preparation batches are recommended for students 16 years and above.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Are online classes available? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Yes! We offer both offline (at our Begum Bagh center) and online classes via Zoom/Google Meet. Online students receive all study materials digitally and the same quality of instruction.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How long is the IELTS course? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Our standard IELTS preparation course is 12 weeks (3 months). We also offer intensive 4-week crash courses for students who have already attempted IELTS and want to improve their band score.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is the fee structure? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Fee varies by course and batch type. Please contact us on +91 99977 56675 or WhatsApp for current fee details, batch schedules, and available discounts for early enrollment.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Do you offer OET and Spanish courses too? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Yes! We offer OET (Occupational English Test) preparation for healthcare professionals targeting UK, Australia, and New Zealand, along with beginner and intermediate Spanish language courses.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is study material included in the fee? <span class="faq-arrow">▼</span></div>
+          <div class="faq-a">Absolutely. All study materials — books, worksheets, practice tests, and vocabulary notes — are provided as part of the course. No additional purchase is required.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label">✦ Get in Touch</div>
+    <h2 class="section-h2">Contact <span class="hl-green">The Howard's Council</span></h2>
+    <p class="section-sub">Visit us, call us, or drop a message. We're here to guide you every step of the way.</p>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info">
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fa-solid fa-location-dot" style="color:#ef4444;"></i></div>
+            <div>
+              <h4>Address</h4>
+              <p>618, Shiv Mandir Lane, Begum Bagh<br/>Meerut, Uttar Pradesh – 250001</p>
+            </div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fa-solid fa-phone" style="color:#3b82f6;"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+919997756675">+91 99977 56675</a>
+            </div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fa-brands fa-whatsapp" style="color:#22c55e;"></i></div>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/919997756675" target="_blank">Chat with us on WhatsApp →</a>
+            </div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fa-solid fa-envelope" style="color:#f59e0b;"></i></div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@howardscouncil.in">info@howardscouncil.in</a>
+            </div>
+          </div>
+          <div class="ci-card">
+            <div class="ci-icon"><i class="fa-solid fa-clock" style="color:#8b5cf6;"></i></div>
+            <div>
+              <h4>Timings</h4>
+              <p>Open Daily · Closes 9 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.35!2d77.7!3d28.97!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c650290198e4f%3A0xfd8000d005fc6e9e!2sThe%20Howard's%20Council!5e0!3m2!1sen!2sin!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="The Howard's Council Location">
+          </iframe>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-in">
+        <h3>Send Us a <span class="hl-yellow">Message</span></h3>
+        <p>We'll get back to you within 24 hours on any business day.</p>
+        <form id="contactForm" onsubmit="submitContact(event)">
+          <div class="cf-grid">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" id="cname" placeholder="Full name" required/>
+            </div>
+            <div class="form-group">
+              <label>Phone *</label>
+              <input type="tel" id="cphone" placeholder="+91 ..." required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="cemail" placeholder="your@email.com"/>
+          </div>
+          <div class="form-group">
+            <label>Course Interest</label>
+            <select id="ccourse">
+              <option value="">Select a course...</option>
+              <option>IELTS Preparation</option>
+              <option>Spoken English</option>
+              <option>OET Preparation</option>
+              <option>Spanish Language</option>
+              <option>Grammar Foundation</option>
+              <option>Vocabulary Building</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea class="form-input" id="cmsg" placeholder="Any questions or special requirements..."></textarea>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <button type="submit" class="btn-primary" style="flex:1;justify-content:center;min-width:140px">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <a href="https://wa.me/919997756675" class="btn-wa" target="_blank" style="flex:1;justify-content:center;min-width:140px;text-decoration:none">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <span class="logo-badge" style="background:var(--accent-yellow);color:var(--dark)">THC</span>
+          <h2 style="font-size:1rem;margin:0">THE HOWARD'S COUNCIL</h2>
+        </div>
+        <p>Meerut's premier IELTS &amp; English coaching center. Helping students achieve their global dreams since 2014. 4.6★ rated on Google with 385+ reviews.</p>
+        <div style="font-size:.8rem;margin-bottom:14px;display:flex;flex-direction:column;gap:6px;">
+          <div><i class="fa-solid fa-location-dot" style="color:#ef4444;width:16px;"></i> 618, Shiv Mandir Lane, Begum Bagh, Meerut</div>
+          <div><i class="fa-solid fa-phone" style="color:#3b82f6;width:16px;"></i> <a href="tel:+919997756675" style="color:var(--accent-yellow);text-decoration:none">+91 99977 56675</a></div>
+          <div><i class="fa-solid fa-clock" style="color:#8b5cf6;width:16px;"></i> Open Daily · Closes 9 PM</div>
+        </div>
+        <div class="footer-social">
+          <a class="social-btn" href="https://wa.me/919997756675" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="social-btn" href="tel:+919997756675" title="Call"><i class="fa-solid fa-phone"></i></a>
+          <a class="social-btn" href="mailto:info@howardscouncil.in" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a class="social-btn" href="https://maps.google.com/?q=The+Howard%27s+Council+Meerut" target="_blank" title="Maps"><i class="fa-solid fa-location-dot"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Courses</h4>
+        <ul>
+          <li><a href="#courses">IELTS Preparation</a></li>
+          <li><a href="#courses">Spoken English</a></li>
+          <li><a href="#courses">Grammar Foundation</a></li>
+          <li><a href="#courses">Vocabulary Building</a></li>
+          <li><a href="#courses">OET Preparation</a></li>
+          <li><a href="#courses">Spanish Language</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#faculty">Our Faculty</a></li>
+          <li><a href="#testimonials">Student Results</a></li>
+          <li><a href="#demo">Free Demo Class</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#courses">IELTS Coaching</a></li>
+          <li><a href="#courses">OET Test Prep</a></li>
+          <li><a href="#courses">Spanish Classes</a></li>
+          <li><a href="#courses">Overseas Consultant</a></li>
+          <li><a href="#contact">Career Guidance</a></li>
+          <li><a href="#demo">Enroll Now</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 <span>The Howard's Council</span>. All Rights Reserved. | Meerut, UP</div>
+      <div>Made with ❤️ for students of Meerut</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="float-wa" href="https://wa.me/919997756675?text=Hi%2C%20I%27m%20interested%20in%20joining%20The%20Howard%27s%20Council" target="_blank" title="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp" style="color:white;font-size:1.5rem;"></i>
+</a>
+
+<!-- Toast -->
+<div class="toast" id="toast">✅ Message sent! We'll reach out soon.</div>
+
+<script>
+const API = '/api';
+
+/* ── Mobile nav ── */
+const ham = document.getElementById('hamburger');
+const mMenu = document.getElementById('mobileMenu');
+ham.addEventListener('click', () => {
+  mMenu.classList.toggle('active');
+  const spans = ham.querySelectorAll('span');
+  const isOpen = mMenu.classList.contains('active');
+  spans[0].style.transform = isOpen ? 'rotate(45deg) translateY(7px)' : '';
+  spans[1].style.opacity = isOpen ? '0' : '1';
+  spans[2].style.transform = isOpen ? 'rotate(-45deg) translateY(-7px)' : '';
+});
+function closeMobile() {
+  mMenu.classList.remove('active');
+  const spans = ham.querySelectorAll('span');
+  spans[0].style.transform = '';
+  spans[1].style.opacity = '1';
+  spans[2].style.transform = '';
+}
+// Close mobile menu on outside click
+document.addEventListener('click', (e) => {
+  if (mMenu.classList.contains('active') && !mMenu.contains(e.target) && !ham.contains(e.target)) {
+    closeMobile();
+  }
+});
+
+/* ── FAQ ── */
+function toggleFaq(el) {
+  const item = el.parentElement;
+  document.querySelectorAll('.faq-item').forEach(i => { if (i !== item) i.classList.remove('open'); });
+  item.classList.toggle('open');
+}
+
+/* ── Toast ── */
+function showToast(msg, type='success') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.style.background = type === 'error' ? '#dc2626' : 'var(--dark)';
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+/* ── Demo Form ── */
+async function submitDemo(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = '⏳ Booking...'; btn.disabled = true;
+  const payload = {
+    studentName:      document.getElementById('dname').value,
+    age:              parseInt(document.getElementById('dage').value),
+    phoneNumber:      document.getElementById('dphone').value,
+    courseInterested: document.getElementById('dcourse').value,
+    preferredTiming:  document.getElementById('dtiming').value
+  };
+  try {
+    const res = await fetch(`${API}/enquiry/demo`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (data.success) {
+      showToast('✅ Demo booked! We will contact you within 24 hours.');
+      e.target.reset();
+      const wa = `Hi, I just booked a free demo class at The Howard's Council.%0AName: ${encodeURIComponent(payload.studentName)}%0ACourse: ${encodeURIComponent(payload.courseInterested)}`;
+      setTimeout(() => window.open(`https://wa.me/919997756675?text=${wa}`, '_blank'), 800);
+    } else {
+      showToast('❌ ' + (data.message || 'Something went wrong'), 'error');
+    }
+  } catch(err) {
+    showToast('❌ Network error. Please WhatsApp us directly.', 'error');
+  }
+  btn.textContent = '🎓 Book My Free Demo'; btn.disabled = false;
+}
+
+/* ── Contact Form ── */
+async function submitContact(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  btn.textContent = '⏳ Sending...'; btn.disabled = true;
+  const payload = {
+    name:          document.getElementById('cname').value,
+    phone:         document.getElementById('cphone').value,
+    email:         document.getElementById('cemail').value,
+    courseInterest:document.getElementById('ccourse').value,
+    message:       document.getElementById('cmsg').value
+  };
+  try {
+    const res = await fetch(`${API}/enquiry/contact`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await res.json();
+    if (data.success) {
+      showToast('✅ Message sent! We will get back to you soon.');
+      e.target.reset();
+    } else {
+      showToast('❌ ' + (data.message || 'Failed to send'), 'error');
+    }
+  } catch(err) {
+    showToast('❌ Network error. Please WhatsApp us directly.', 'error');
+  }
+  btn.textContent = '📩 Send Message'; btn.disabled = false;
+}
+
+/* ── Gallery from API ── */
+async function loadGallery() {
+  const container = document.getElementById('galleryGrid');
+  if (!container) return;
+  try {
+    const res = await fetch(`${API}/gallery`);
+    const images = await res.json();
+    if (!images || images.length === 0) return;
+    container.innerHTML = '';
+    images.forEach((img, i) => {
+      const div = document.createElement('div');
+      div.className = 'gallery-item' + (i === 0 ? ' wide' : i === 1 ? ' tall' : '');
+      div.innerHTML = `
+        <img src="${img.imageUrl}" alt="${img.title}"
+          style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);"
+          loading="lazy" onerror="this.parentElement.style.display='none'"/>
+        <div class="gi-label">${img.title}</div>
+        <div class="gallery-overlay"><span>${img.title}</span></div>`;
+      container.appendChild(div);
+    });
+  } catch(e) { /* keep static */ }
+}
+
+/* ── Testimonials from API ── */
+async function loadTestimonials() {
+  try {
+    const res = await fetch(`${API}/testimonials`);
+    const list = await res.json();
+    if (!list || list.length === 0) return;
+    const container = document.querySelector('.testi-grid');
+    if (!container) return;
+    container.innerHTML = list.map((t, i) => `
+      <div class="testi-card ${i===1?'featured-t':''} fade-in">
+        <div class="tc-quote">"</div>
+        <div class="tc-band ${i===0?'':i===1?'green':'blue'}">⭐ ${t.bandScore || t.courseName}</div>
+        <div class="tc-avatar">${t.photoUrl ? `<img src="${t.photoUrl}" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" onerror="this.outerHTML='👤'"/>` : '👤'}</div>
+        <div class="stars">★★★★★</div>
+        <div class="tc-text">${t.testimonialText}</div>
+        <div class="tc-name">${t.studentName}</div>
+        <div class="tc-course">${t.courseName || ''}</div>
+      </div>`).join('');
+    // Re-observe for fade-in
+    container.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+  } catch(e) { /* keep static */ }
+}
+
+/* ── Init ── */
+document.addEventListener('DOMContentLoaded', () => {
+  loadGallery();
+  loadTestimonials();
+});
+
+/* ── Scroll Fade In ── */
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+}, { threshold: 0.08 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+/* ── Nav active highlight ── */
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--dark)' : '';
+    a.style.fontWeight = a.getAttribute('href') === '#' + cur ? '800' : '';
+  });
+}, { passive: true });
+</script>
+</body>
+</html>
